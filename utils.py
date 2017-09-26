@@ -5,6 +5,16 @@ import tensorflow as tf
 import copy
 import cv2
 
+NORM_H, NORM_W = 416, 416
+GRID_H, GRID_W = 13 , 13
+BOX = 5
+CLASS = 20
+
+THRESHOLD = 0.2
+
+ANCHORS = '1.08,1.19,  3.42,4.41,  6.63,11.38,  9.42,5.11,  16.62,10.52'
+ANCHORS = [float(ANCHORS.strip()) for ANCHORS in ANCHORS.split(',')]
+
 class BoundBox:
     def __init__(self, class_num):
         self.x, self.y, self.w, self.h, self.c = 0., 0., 0., 0., 0.

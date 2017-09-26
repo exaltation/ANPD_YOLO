@@ -5,7 +5,6 @@ import numpy as np
 import tensorflow as tf
 
 NORM_H, NORM_W = 416, 416
-
 GRID_H, GRID_W = 13 , 13
 BOX = 5
 CLASS = 20
